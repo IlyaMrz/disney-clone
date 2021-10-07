@@ -81,13 +81,20 @@ const Video = ({ video }) => {
                 </div>
             )}
             {watching && (
-                <div style={{ marginTop: "2vh" }}>
-                    <video width="100%" controls>
+                <div
+                    style={{
+                        marginTop: "2vh",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                    }}
+                >
+                    <Link href="/">
+                        <p>go Home</p>
+                    </Link>
+                    <video width="75%" controls>
                         <source src={video.mp4.url} type="video/mp4" />
                     </video>
-                    <Link href="/">
-                        <p>Home</p>
-                    </Link>
                 </div>
             )}
             <div
